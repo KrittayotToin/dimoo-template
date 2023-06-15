@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Practice by krittayot.</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Sign-up form start -->
+    <div id="content" class="content">
+        <div class="grid-container">
+            <div class="grid-item flex-container">
+                <h1> Stay updated! </h1>
+                <span> Join 60,000+ product managers receiving monthly updates on: </span>
+                <ul>
+                    <li>
+                        <p> Product discovery and building what matters</p>
+                    </li>
+                    <li>
+                        <p> Measuring to ensure updates are a success</p>
+                    </li>
+                    <li>
+                        <p> And much more!</p>
+                    </li>
+                </ul>
+                <p>Email address</p>
+                <input type="email" name="email" placeholder=" email@company.com">
+                <button class="button1" onclick="showMessage(); return false;">Subscribe to monthly newsletter</button>
+                <!-- Sign-up form end -->
+                <!-- Success message start -->
+            </div>
+            <img src="./assets/images/dimoo.jpeg" alt="Boy anime" width="500" height="600" class="grid-item">
+        </div>
+    </div>
+    <div id="success-message" class="success-message hidden">
+        Thanks for subscribing!
+        A confirmation email has been sent to ash@loremcompany.com.
+        Please open it and click the button inside to confirm your subscription.
+        <a id ="dissmiss-message"href="#" onclick="dismissMessage(); return false;">Dismiss message</a>
+    </div>
+    <!-- Success message end -->
+</body>
+
+</html>
+<script type="text/javascript">
+function showMessage() {
+    let message = document.getElementById('success-message')
+    let content = document.getElementById('content')
+    // console.log(message.classList)
+    message.classList.remove('hidden');
+    content.classList.add('hidden');
+};
+
+function dismissMessage() {
+    let message = document.getElementById('success-message')
+    let content = document.getElementById('content')
+    message.classList.add('hidden')
+    content.classList.remove('hidden');
+}
+</script>
+<style type="text/css">
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #33334d;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25% 25%;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px 0, 0 6px 20px 0;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*    border: 1px solid rgba(0, 0, 0, 0.8);*/
+    /*    padding: 20px;*/
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 20px;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+.button1 {
+    background-color: #33334d;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.success-message {
+    background-color: #ff6666;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    padding: 4px 4px;
+}
+
+#dissmiss-message {
+    color: white;
+}
+</style>
